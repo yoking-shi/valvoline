@@ -33,5 +33,8 @@ module Valvoline
     config.time_zone = 'Beijing'
     config.active_record.default_timezone = :local
     config.i18n.default_locale = 'cn'.to_sym
+
+    config.action_controller.perform_caching = true
+    config.cache_store = :redis_cache_store, { url: 'redis://127.0.0.1:6379/0' }
   end
 end
