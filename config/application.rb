@@ -29,5 +29,9 @@ module Valvoline
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.encoding = 'utf-8'
+    config.time_zone = 'Beijing'
+    config.active_record.default_timezone = :local
+    config.i18n.default_locale = 'cn'.to_sym
   end
 end
