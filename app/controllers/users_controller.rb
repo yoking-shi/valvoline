@@ -1,19 +1,17 @@
 class UsersController < ApplicationController
-  def index
+  layout 'users', only: %i[sign_up sign_in forget_password]
+
+  def index; end
+
+  def new
+    @user = User.new
   end
 
-  def create
-  end
+  def create; end
 
-  def to_sign_in
-  end
+  def to_sign_in; end
 
-  def sign_up
-  end
+  def forget_password; end
 
-  def to_sign_up
-  end
-
-  def sign_out
-  end
+  def sign_out; end
 end
