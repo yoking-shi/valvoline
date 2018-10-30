@@ -3,11 +3,18 @@
 
 form {
   .form-row {
+    input.error {
+      border-color: #dc3545;
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 0, 24, 0.25)
+      }
+    }
     label.error {
       position: absolute;
       font-size: 12px;
       top: 3px;
       right: 0;
+      color: #dc3545;
     }
   }
 }

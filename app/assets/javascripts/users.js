@@ -1,6 +1,5 @@
 $(document).on('turbolinks:load', () => {
   $('#sign-up-form').validate({
-    submitHandler: function(form) {},
     rules: {
       'user[account]': {
         required: true,
@@ -12,7 +11,8 @@ $(document).on('turbolinks:load', () => {
       },
       'user[password_confirmation]': {
         required: true,
-        minlength: 6
+        minlength: 6,
+        equalTo: '#user_password'
       },
       'user[email]': {
         required: true,
