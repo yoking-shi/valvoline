@@ -1,6 +1,9 @@
 <div class="row align-items-center justify-content-center users-new-row">
   <div class="col-4">
     <%= form_for @user, html: { id: 'sign-up-form' } do |f| %>
+      <div class="error-tips <%= flash[:alert].present? ? 'show' : 'hide' %>">
+        <%= flash[:alert] %>
+      </div>
       <div class="form-row">
         <div class="col-12">
           <label for="account">用户账号：</label>

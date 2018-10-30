@@ -3,14 +3,23 @@ class UsersController < ApplicationController
 
   def index; end
 
-  def new
+  def sign_up
     @user = User.new
   end
 
   def create
-    binding.pry
+    @user = User.new(user_params)
     if verify_rucaptcha?
+      if @user.save
+        flash[:notice] = '恭喜您加入我们！'
+        redirect_to root_path
+      else
+        flash[:alert] = @user.errors.messages
+        render :sign_up, local: @user
+      end
     else
+      flash[:alert] = '验证码错误'
+      render :sign_up, local: @user
     end
   end
 
