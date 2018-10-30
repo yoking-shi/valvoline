@@ -1,2 +1,13 @@
 @import "bootstrap";
 @import "./**/*";
+
+form {
+  .form-row {
+    label.error {
+      position: absolute;
+      font-size: 12px;
+      top: 3px;
+      right: 0;
+    }
+  }
+}
