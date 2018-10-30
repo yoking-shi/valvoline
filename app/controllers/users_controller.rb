@@ -25,7 +25,11 @@ class UsersController < ApplicationController
 
   def to_sign_in; end
 
-  def forget_password; end
+  def forget_password
+  end
+
+  def change_password
+  end
 
   def sign_out; end
 
