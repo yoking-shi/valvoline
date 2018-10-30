@@ -40,7 +40,8 @@ $(document).on('turbolinks:load', () => {
       },
       'user[password_confirmation]': {
         required: '请输入确认密码！',
-        minlength: '请输入最少长度为6位的确认密码!'
+        minlength: '请输入最少长度为6位的确认密码!',
+        equalTo: '请输入与密码相同的内容！'
       },
       'user[email]': {
         required: '请输入用户邮箱！',

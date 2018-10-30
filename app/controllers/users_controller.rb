@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    binding.pry
     if verify_rucaptcha?
     else
     end

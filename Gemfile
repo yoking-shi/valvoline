@@ -24,5 +24,6 @@ end
 gem 'bootstrap', '~> 4.1.3'
 gem 'hiredis'
 gem 'jquery-rails'
+gem 'paranoia' # fake delete
 gem 'rucaptcha'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
