@@ -1,0 +1,13 @@
+cn:
+  activerecord:
+    attributes:
+      user:
+        id: 编号
+        account: 用户名
+        password_digest: 密码
+        email: 邮箱
+        qq: QQ号码
+        mobile: 手机号码
+        deleted_at: 删除时间
+        created_at: 创建时间
+        updated_at: 更新时间

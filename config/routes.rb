@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     collection do
       post :to_sign_in
       put :change_password
+      get :export_xlsx
+      get :import_xlsx
     end
   end
 
