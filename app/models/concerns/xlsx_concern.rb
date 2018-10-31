@@ -7,9 +7,9 @@ module XlsxConcern
   end
 
   module ClassMethods
-    def export_xlsx(name: 'data', data: nil)
+    def export_xlsx(name: 'table')
       path = Rails.root.join('tmp').to_path + "/#{name}.xlsx"
-      generate(path, data)
+      generate(path, self.all)
       path
     end
 

@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   def sign_out; end
 
   def export_xlsx
-    send_file User.export_xlsx(name: '用户', data: User.all)
+    send_file User.limit(100).export_xlsx(name: '用户')
   end
 
   private
