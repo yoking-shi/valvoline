@@ -22,6 +22,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 gem 'bootstrap', '~> 4.1.3'
+gem 'has_secure_token'
 gem 'hiredis'
 gem 'jquery-rails'
 gem 'paranoia' # fake delete
