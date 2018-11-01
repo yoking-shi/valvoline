@@ -7,22 +7,22 @@ module XlsxConcern
   end
 
   module ClassMethods
-
+    # 返回文件路径
     def export_xlsx(name: 'table')
       path = Rails.root.join('tmp').to_path + "/#{name}.xlsx"
-      generate(path)
+      generate_xlsx(path)
       path
     end
 
-    # 导出的数据
-    def generate(path)
+    # 生成xlsx表
+    def generate_xlsx(path)
       xlsx_file = WriteXLSX.new(path)
       xlsx_sheet = xlsx_file.add_worksheet
       attribute_names = self.attribute_names
       attribute_names.each_with_index do |name, index|
-        xlsx_sheet.write(0, index, self.human_attribute_name(name))
+        xlsx_sheet.write(0, index, human_attribute_name(name))
       end
-      self.all.each_with_index do |user, index|
+      all.each_with_index do |user, index|
         attribute_names.each_with_index do |name, name_index|
           xlsx_sheet.write(index + 1, name_index, user[name])
         end
