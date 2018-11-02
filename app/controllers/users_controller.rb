@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   layout 'users', only: %i[sign_up sign_in forget_password]
 
